@@ -1,6 +1,10 @@
-number = 0
-for x in range(10):
-    for y in range(10):
-        number = x*y
-        print(x*y)
-    print("\n")
+from pathlib import Path
+import json
+
+numbers = [2, 3, 5, 7, 11, 13]
+
+path = Path('numbers.json')
+contents = json.dumps(numbers)
+path.write_text(contents)
+
+print(numbers)
