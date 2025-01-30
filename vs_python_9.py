@@ -18,7 +18,7 @@ while True:
         input1 = input("")
         var1 += f"\n{name} wrote: \n{input1}"
         path1.write_text(var1)
-    except UnicodeDecodeError:
+    except UnicodeEncodeError:
         print("please only enter charecters. \ntry again.")
     except EOFError:
         print("please only enter charecters. \ntry again.")
